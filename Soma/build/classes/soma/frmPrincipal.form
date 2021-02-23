@@ -26,15 +26,13 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txfPrimeiroNumero" min="-2" pref="148" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txfPrimeiroNumero" pref="148" max="32767" attributes="0"/>
                   <Component id="lblResultado" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="lblSegundoNumero" min="-2" max="-2" attributes="0"/>
-                      <Component id="txfSegundoNumero" alignment="0" max="32767" attributes="0"/>
-                      <Component id="btnMultiplicar" pref="148" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="lblSegundoNumero" min="-2" max="-2" attributes="0"/>
+                  <Component id="txfSegundoNumero" alignment="0" pref="148" max="32767" attributes="0"/>
                   <Component id="lblPrimeiroNumero" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSomar" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
@@ -52,8 +50,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txfSegundoNumero" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnMultiplicar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnSomar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="lblResultado" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
@@ -75,18 +73,18 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txfSegundoNumero">
     </Component>
-    <Component class="javax.swing.JButton" name="btnMultiplicar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Multiplicar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMultiplicarActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JLabel" name="lblResultado">
       <Properties>
         <Property name="text" type="java.lang.String" value="Resultado"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSomar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Somar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSomarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
