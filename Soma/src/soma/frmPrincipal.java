@@ -37,7 +37,7 @@ public class frmPrincipal extends javax.swing.JDialog
         txfPrimeiroNumero = new javax.swing.JTextField();
         lblSegundoNumero = new javax.swing.JLabel();
         txfSegundoNumero = new javax.swing.JTextField();
-        btnSomar = new javax.swing.JButton();
+        btnMultiplicar = new javax.swing.JButton();
         lblResultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -47,12 +47,12 @@ public class frmPrincipal extends javax.swing.JDialog
 
         lblSegundoNumero.setText("Digite o segundo número");
 
-        btnSomar.setText("Somar");
-        btnSomar.addActionListener(new java.awt.event.ActionListener()
+        btnMultiplicar.setText("Multiplicar");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                btnSomarActionPerformed(evt);
+                btnMultiplicarActionPerformed(evt);
             }
         });
 
@@ -70,7 +70,7 @@ public class frmPrincipal extends javax.swing.JDialog
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lblSegundoNumero)
                         .addComponent(txfSegundoNumero)
-                        .addComponent(btnSomar, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                        .addComponent(btnMultiplicar, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
                     .addComponent(lblPrimeiroNumero))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
@@ -86,7 +86,7 @@ public class frmPrincipal extends javax.swing.JDialog
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txfSegundoNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnSomar)
+                .addComponent(btnMultiplicar)
                 .addGap(18, 18, 18)
                 .addComponent(lblResultado)
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -96,22 +96,22 @@ public class frmPrincipal extends javax.swing.JDialog
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSomarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSomarActionPerformed
-    {//GEN-HEADEREND:event_btnSomarActionPerformed
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnMultiplicarActionPerformed
+    {//GEN-HEADEREND:event_btnMultiplicarActionPerformed
         Double numero1 = 0.0;
         Double numero2 = 0.0;
         try
         {
             numero1 = Double.parseDouble(txfPrimeiroNumero.getText());
             numero2 = Double.parseDouble(txfSegundoNumero.getText());
-            lblResultado.setText(String.valueOf(numero1 + numero2));
+            lblResultado.setText(String.valueOf(numero1 * numero2));
         }
         catch (Exception e)
         {
             lblResultado.setText("Digite um número válido");
         }
         
-    }//GEN-LAST:event_btnSomarActionPerformed
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,7 +172,7 @@ public class frmPrincipal extends javax.swing.JDialog
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSomar;
+    private javax.swing.JButton btnMultiplicar;
     private javax.swing.JLabel lblPrimeiroNumero;
     private javax.swing.JLabel lblResultado;
     private javax.swing.JLabel lblSegundoNumero;
