@@ -61,6 +61,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblPrimeiroNumero">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="0" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Digite o primeiro n&#xfa;mero"/>
       </Properties>
     </Component>

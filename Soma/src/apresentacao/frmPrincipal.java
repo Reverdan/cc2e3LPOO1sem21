@@ -6,6 +6,8 @@
 package apresentacao;
 
 import javax.swing.JOptionPane;
+import modelo.Controle;
+
 
 /**
  *
@@ -43,6 +45,7 @@ public class frmPrincipal extends javax.swing.JDialog
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Soma");
 
+        lblPrimeiroNumero.setBackground(new java.awt.Color(255, 0, 102));
         lblPrimeiroNumero.setText("Digite o primeiro número");
 
         lblSegundoNumero.setText("Digite o segundo número");
@@ -97,17 +100,17 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void btnSomarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSomarActionPerformed
     {//GEN-HEADEREND:event_btnSomarActionPerformed
-        Double numero1 = 0.0;
-        Double numero2 = 0.0;
-        try
+        Controle controle = new Controle();
+        controle.num1 = txfPrimeiroNumero.getText();
+        controle.num2 = txfSegundoNumero.getText();
+        controle.calcular();
+        if (controle.mensagem.equals(""))
         {
-            numero1 = Double.parseDouble(txfPrimeiroNumero.getText());
-            numero2 = Double.parseDouble(txfSegundoNumero.getText());
-            lblResultado.setText(String.valueOf(numero1 + numero2));
+            lblResultado.setText(controle.resultado);
         }
-        catch (Exception e)
+        else
         {
-            lblResultado.setText("Digite um número válido");
+            JOptionPane.showMessageDialog(null, controle.mensagem);
         }
     }//GEN-LAST:event_btnSomarActionPerformed
 
