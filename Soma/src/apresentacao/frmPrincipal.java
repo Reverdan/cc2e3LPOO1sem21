@@ -100,18 +100,7 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void btnSomarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnSomarActionPerformed
     {//GEN-HEADEREND:event_btnSomarActionPerformed
-        Controle controle = new Controle();
-        controle.num1 = txfPrimeiroNumero.getText();
-        controle.num2 = txfSegundoNumero.getText();
-        controle.calcular();
-        if (controle.mensagem.equals(""))
-        {
-            lblResultado.setText(controle.resultado);
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null, controle.mensagem);
-        }
+
     }//GEN-LAST:event_btnSomarActionPerformed
 
     /**
