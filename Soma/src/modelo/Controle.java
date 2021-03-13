@@ -2,25 +2,15 @@ package modelo;
 
 public class Controle 
 {
-    private Double numero1;
-    private Double numero2;
-    public String resultado;
     public String num1;
     public String num2;
     public String mensagem;
+    public String operacao;
+    public String resultado;
     
-    public void calcular()
+    public void executar()
     {
-        mensagem = "";
-        try
-        {
-            numero1 = Double.parseDouble(num1);
-            numero2 = Double.parseDouble(num2);
-            resultado = String.valueOf(numero1 + numero2);
-        }
-        catch (Exception e)
-        {
-            mensagem = "Erro de conversão";
-        }
+        
     }
 }
+
