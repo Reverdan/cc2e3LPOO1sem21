@@ -27,12 +27,21 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="btnMultiplicar" min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnDividir" min="-2" pref="58" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="txfPrimeiroNumero" pref="148" max="32767" attributes="0"/>
-                  <Component id="lblResultado" min="-2" max="-2" attributes="0"/>
                   <Component id="lblSegundoNumero" min="-2" max="-2" attributes="0"/>
                   <Component id="txfSegundoNumero" alignment="0" pref="148" max="32767" attributes="0"/>
                   <Component id="lblPrimeiroNumero" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnSomar" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lblResultado" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btnSomar" min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnSubtrair" min="-2" pref="58" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
@@ -50,10 +59,18 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txfSegundoNumero" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnSomar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnSubtrair" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnSomar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnDividir" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMultiplicar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="13" max="32767" attributes="0"/>
               <Component id="lblResultado" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="33" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -83,10 +100,34 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSomar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Somar"/>
+        <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSomarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnSubtrair">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="-"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSubtrairActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMultiplicar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="x"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMultiplicarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDividir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="/"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDividirActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

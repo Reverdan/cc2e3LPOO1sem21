@@ -16,7 +16,7 @@ public class Validacao
         {
             numero1 = Double.parseDouble(num1);
             numero2 = Double.parseDouble(num2);
-            if (operacao.equals("/") && numero2.equals(0))
+            if (operacao.equals("/") && numero2.equals(0.0))
                 mensagem = "Divisão por zero";
         }
         catch (Exception e)
