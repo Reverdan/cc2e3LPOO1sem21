@@ -143,18 +143,15 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void enviar(String operacao)
     {
-        Controle controle = new Controle();
-        controle.num1 = txfPrimeiroNumero.getText();
-        controle.num2 = txfSegundoNumero.getText();
-        controle.operacao = operacao;
-        controle.executar();
-        if (controle.mensagem.equals(""))
+        Controle controle = new Controle(txfPrimeiroNumero.getText(), 
+            txfSegundoNumero.getText(), operacao);
+        if (controle.getMensagem().equals(""))
         {
-            lblResultado.setText(controle.resultado);
+            lblResultado.setText(controle.getResultado());
         }
         else
         {
-            JOptionPane.showMessageDialog(null, controle.mensagem);
+            JOptionPane.showMessageDialog(null, controle.getMensagem());
         }
     }
     

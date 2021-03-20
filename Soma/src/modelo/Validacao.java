@@ -2,14 +2,22 @@ package modelo;
 
 public class Validacao 
 {
-    public String num1;
-    public String num2;
-    public Double numero1;
-    public Double numero2;
-    public String mensagem;
-    public String operacao;
+    private String num1;
+    private String num2;
+    private Double numero1;
+    private Double numero2;
+    private String mensagem;
+    private String operacao;
+
+    public Validacao(String num1, String num2, String operacao)
+    {
+        this.num1 = num1.replaceAll(",", ".");
+        this.num2 = num2.replaceAll(",", ".");
+        this.operacao = operacao;
+        this.validar();
+    }
     
-    public void validar()
+    private void validar()
     {
         mensagem = "";
         try
@@ -24,4 +32,22 @@ public class Validacao
             mensagem = "Erro de conversão";
         }
     }
+
+    public String getMensagem()
+    {
+        return mensagem;
+    }
+
+    public Double getNumero1()
+    {
+        return numero1;
+    }
+
+    public Double getNumero2()
+    {
+        return numero2;
+    }
+    
+    
+    
 }
