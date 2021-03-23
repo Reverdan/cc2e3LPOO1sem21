@@ -1,13 +1,7 @@
 package modelo;
 
-public class Validacao 
+public class Validacao extends absPropriedades
 {
-    private String num1;
-    private String num2;
-    private Double numero1;
-    private Double numero2;
-    private String mensagem;
-    private String operacao;
 
     public Validacao(String num1, String num2, String operacao)
     {
@@ -33,20 +27,6 @@ public class Validacao
         }
     }
 
-    public String getMensagem()
-    {
-        return mensagem;
-    }
-
-    public Double getNumero1()
-    {
-        return numero1;
-    }
-
-    public Double getNumero2()
-    {
-        return numero2;
-    }
     
     
     

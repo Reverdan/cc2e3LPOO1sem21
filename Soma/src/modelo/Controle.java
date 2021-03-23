@@ -1,13 +1,7 @@
 package modelo;
 
-public class Controle 
+public class Controle extends absPropriedades
 {
-    private String num1;
-    private String num2;
-    private String mensagem;
-    private String operacao;
-    private String resultado;
-
     public Controle(String num1, String num2, String operacao)
     {
         this.num1 = num1;
@@ -31,14 +25,5 @@ public class Controle
         }
     }
 
-    public String getMensagem()
-    {
-        return mensagem;
-    }
-
-    public String getResultado()
-    {
-        return resultado;
-    }
 }
 
