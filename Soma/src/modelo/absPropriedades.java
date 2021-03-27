@@ -1,14 +1,14 @@
 package modelo;
 
-public class absPropriedades 
+public abstract class absPropriedades 
 {
-    public Double numero1;
-    public Double numero2;
-    public String operacao;
-    public String resultado;
-    public String num1;
-    public String num2;
-    public String mensagem;
+    protected Double numero1;
+    protected Double numero2;
+    protected String operacao;
+    protected String resultado;
+    protected String num1;
+    protected String num2;
+    protected String mensagem;
     
     public String getResultado()
     {
@@ -20,12 +20,12 @@ public class absPropriedades
         return mensagem;
     }
 
-    public Double getNumero1()
+    protected Double getNumero1()
     {
         return numero1;
     }
 
-    public Double getNumero2()
+    protected Double getNumero2()
     {
         return numero2;
     }

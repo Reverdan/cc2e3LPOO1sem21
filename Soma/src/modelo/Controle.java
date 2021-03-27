@@ -23,6 +23,7 @@ public class Controle extends absPropriedades
         {
             this.mensagem = validacao.getMensagem();
         }
+        
     }
 
 }
