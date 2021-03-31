@@ -15,6 +15,8 @@ public class Validacao extends absPropriedades
         try
         {
             this.setNum(Integer.parseInt(this.getNumero()));
+            if (this.getNum() < 0)
+                this.setMensagem("Digite apenas números positivos");
         }
         catch (Exception e)
         {

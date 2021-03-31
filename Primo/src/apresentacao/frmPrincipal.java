@@ -5,6 +5,8 @@
  */
 package apresentacao;
 
+import modelo.Controle;
+
 /**
  *
  * @author Rever
@@ -80,7 +82,8 @@ public class frmPrincipal extends javax.swing.JDialog
 
     private void btnVerificaPrimoActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnVerificaPrimoActionPerformed
     {//GEN-HEADEREND:event_btnVerificaPrimoActionPerformed
-        // TODO add your handling code here:
+        Controle controle = new Controle(txfNumero.getText());
+        lblResposta.setText(controle.getMensagem());
     }//GEN-LAST:event_btnVerificaPrimoActionPerformed
 
     /**
