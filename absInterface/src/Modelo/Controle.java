@@ -1,27 +1,44 @@
 package Modelo;
 
-public class Controle extends absPropriedades
+public class Controle
 {
-
-    public Controle(String tipo, String temp)
-    {
-        super(tipo, temp);
-    }
-
-    @Override
-    public void executar()
+    protected String mensagem;
+    protected String resposta;
+    
+    public void calcularFatorial(String num)
     {
         this.mensagem = "";
-        Validacao validacao = new Validacao(temp);
-        if (validacao.mensagem.equals(""))
+        Validacao validacao = new Validacao();
+        this.mensagem = validacao.validarNumeroInteiroPositivo(num);
+        if (this.mensagem.equals(""))
         {
-            Conversao conversao = new Conversao(tipo, validacao.temperatura);
-            this.resposta = conversao.resposta;
-        }
-        else
-        {
-            this.mensagem = validacao.mensagem;
+            Fatorial fatorial = new Fatorial(validacao.numeroIntPos);
+            this.resposta = fatorial.resposta;
         }
     }
+    
+    public void converterTemperatura(String tipo, String temp)
+    {
+        this.mensagem = "";
+        Validacao validacao = new Validacao();
+        this.mensagem = validacao.validarNumero(temp);
+        if (this.mensagem.equals(""))
+        {
+            Conversao conversao = new Conversao(tipo, validacao.numero);
+            this.resposta = conversao.resposta;
+        }
+    }
+
+    public String getMensagem()
+    {
+        return mensagem;
+    }
+
+    public String getResposta()
+    {
+        return resposta;
+    }
+    
+    
 
 }

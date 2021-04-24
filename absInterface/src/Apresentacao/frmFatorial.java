@@ -5,17 +5,19 @@
  */
 package Apresentacao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rever
  */
-public class frmPrincipal extends javax.swing.JDialog
+public class frmFatorial extends javax.swing.JDialog
 {
 
     /**
-     * Creates new form frmPrincipal
+     * Creates new form frmFatorial
      */
-    public frmPrincipal(java.awt.Frame parent, boolean modal)
+    public frmFatorial(java.awt.Frame parent, boolean modal)
     {
         super(parent, modal);
         initComponents();
@@ -31,66 +33,65 @@ public class frmPrincipal extends javax.swing.JDialog
     private void initComponents()
     {
 
-        mnbExercicios = new javax.swing.JMenuBar();
-        mnuExercicios = new javax.swing.JMenu();
-        mniTemperatura = new javax.swing.JMenuItem();
-        mniFatorial = new javax.swing.JMenuItem();
+        txfNumero = new javax.swing.JTextField();
+        btnCalcular = new javax.swing.JButton();
+        lblResposta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Exercícios");
+        setTitle("Fatorial");
 
-        mnuExercicios.setText("Exercícios");
-
-        mniTemperatura.setText("Temperatura");
-        mniTemperatura.addActionListener(new java.awt.event.ActionListener()
+        btnCalcular.setText("Calcular Fatorial");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                mniTemperaturaActionPerformed(evt);
+                btnCalcularActionPerformed(evt);
             }
         });
-        mnuExercicios.add(mniTemperatura);
 
-        mniFatorial.setText("Fatorial");
-        mniFatorial.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                mniFatorialActionPerformed(evt);
-            }
-        });
-        mnuExercicios.add(mniFatorial);
-
-        mnbExercicios.add(mnuExercicios);
-
-        setJMenuBar(mnbExercicios);
+        lblResposta.setText("Resposta");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblResposta)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txfNumero)
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(txfNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCalcular)
+                .addGap(18, 18, 18)
+                .addComponent(lblResposta)
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void mniTemperaturaActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mniTemperaturaActionPerformed
-    {//GEN-HEADEREND:event_mniTemperaturaActionPerformed
-        frmTemperatura frmT = new frmTemperatura(null, true);
-        frmT.setVisible(true);
-    }//GEN-LAST:event_mniTemperaturaActionPerformed
-
-    private void mniFatorialActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mniFatorialActionPerformed
-    {//GEN-HEADEREND:event_mniFatorialActionPerformed
-        frmFatorial frmF = new frmFatorial(null, true);
-        frmF.setVisible(true);
-    }//GEN-LAST:event_mniFatorialActionPerformed
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCalcularActionPerformed
+    {//GEN-HEADEREND:event_btnCalcularActionPerformed
+        Modelo.Controle controle = new Modelo.Controle();
+        controle.calcularFatorial(txfNumero.getText());
+        if (controle.getMensagem().equals(""))
+            lblResposta.setText(controle.getResposta());
+        else
+        {
+            JOptionPane.showMessageDialog(null, controle.getMensagem());
+            lblResposta.setText("Resposta");
+        }
+    }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,19 +116,19 @@ public class frmPrincipal extends javax.swing.JDialog
         }
         catch (ClassNotFoundException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmFatorial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (InstantiationException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmFatorial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (IllegalAccessException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmFatorial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmFatorial.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -136,7 +137,7 @@ public class frmPrincipal extends javax.swing.JDialog
         {
             public void run()
             {
-                frmPrincipal dialog = new frmPrincipal(new javax.swing.JFrame(), true);
+                frmFatorial dialog = new frmFatorial(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter()
                 {
                     @Override
@@ -151,9 +152,8 @@ public class frmPrincipal extends javax.swing.JDialog
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar mnbExercicios;
-    private javax.swing.JMenuItem mniFatorial;
-    private javax.swing.JMenuItem mniTemperatura;
-    private javax.swing.JMenu mnuExercicios;
+    private javax.swing.JButton btnCalcular;
+    private javax.swing.JLabel lblResposta;
+    private javax.swing.JTextField txfNumero;
     // End of variables declaration//GEN-END:variables
 }

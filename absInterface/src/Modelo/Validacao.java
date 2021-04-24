@@ -1,25 +1,39 @@
 package Modelo;
 
-public class Validacao extends absPropriedades
+public class Validacao
 {
-
-    public Validacao(String temp)
-    {
-        super(temp);
-    }
+    private String mensagem;
+    protected Double numero;
+    protected Integer numeroIntPos;
     
-    @Override
-    public void executar()
+    public String validarNumeroInteiroPositivo(String num)
     {
         this.mensagem = "";
         try
         {
-            this.temperatura = Double.parseDouble(this.temp);
+            this.numeroIntPos = Integer.parseInt(num);
+            if (numeroIntPos < 0)
+                this.mensagem = "Número deve ser positivo";
         }
         catch (Exception e)
         {
             this.mensagem = "Número inválido";
         }
+        return mensagem;
+    }
+    
+    public String validarNumero(String num)
+    {
+        this.mensagem = "";
+        try
+        {
+            this.numero = Double.parseDouble(num);
+        }
+        catch (Exception e)
+        {
+            this.mensagem = "Número inválido";
+        }
+        return mensagem;
     }
 
 

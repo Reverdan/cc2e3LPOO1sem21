@@ -106,7 +106,8 @@ public class frmTemperatura extends javax.swing.JDialog {
             tipo = "CF";
         else
             tipo = "FC";
-        Controle controle = new Controle(tipo, txfTemperatura.getText());
+        Controle controle = new Controle();
+        controle.converterTemperatura(tipo, txfTemperatura.getText());
         if (controle.getMensagem().equals(""))
         {
             lblResposta.setText(controle.getResposta());
