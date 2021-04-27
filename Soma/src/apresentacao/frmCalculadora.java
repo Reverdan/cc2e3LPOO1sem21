@@ -13,13 +13,13 @@ import modelo.Controle;
  *
  * @author Rever
  */
-public class frmPrincipal extends javax.swing.JDialog
+public class frmCalculadora extends javax.swing.JDialog
 {
 
     /**
      * Creates new form frmPrincipal
      */
-    public frmPrincipal(java.awt.Frame parent, boolean modal)
+    public frmCalculadora(java.awt.Frame parent, boolean modal)
     {
         super(parent, modal);
         initComponents();
@@ -129,9 +129,10 @@ public class frmPrincipal extends javax.swing.JDialog
                     .addComponent(btnSubtrair)
                     .addComponent(btnSomar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDividir)
-                    .addComponent(btnMultiplicar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnMultiplicar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(lblResultado)
                 .addGap(33, 33, 33))
@@ -198,20 +199,21 @@ public class frmPrincipal extends javax.swing.JDialog
         }
         catch (ClassNotFoundException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (InstantiationException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (IllegalAccessException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
-            java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmCalculadora.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
@@ -219,7 +221,7 @@ public class frmPrincipal extends javax.swing.JDialog
         {
             public void run()
             {
-                frmPrincipal dialog = new frmPrincipal(new javax.swing.JFrame(), true);
+                frmCalculadora dialog = new frmCalculadora(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter()
                 {
                     @Override

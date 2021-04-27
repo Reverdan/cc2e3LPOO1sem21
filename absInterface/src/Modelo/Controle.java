@@ -5,6 +5,24 @@ public class Controle
     protected String mensagem;
     protected String resposta;
     
+    public void calcularCalculadora(String num1, String num2, String operacao)
+    {
+        this.mensagem = "";
+        Validacao validacao = new Validacao();
+    }
+    
+    public void calcularPrimo(String num)
+    {
+        this.mensagem = "";
+        Validacao validacao = new Validacao();
+        this.mensagem = validacao.validarNumeroInteiroPositivo(num);
+        if (this.mensagem.equals(""))
+        {
+            Primo primo = new Primo(validacao.numeroIntPos);
+            this.resposta = primo.resposta;
+        }
+    }
+    
     public void calcularFatorial(String num)
     {
         this.mensagem = "";

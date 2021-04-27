@@ -1,12 +1,12 @@
 package soma;
 
-import apresentacao.frmPrincipal;
+import apresentacao.frmCalculadora;
 
 public class Soma
 {
     public static void main(String[] args)
     {
-        frmPrincipal frmP = new frmPrincipal(null, true);
+        frmCalculadora frmP = new frmCalculadora(null, true);
         frmP.setVisible(true);
     }
     

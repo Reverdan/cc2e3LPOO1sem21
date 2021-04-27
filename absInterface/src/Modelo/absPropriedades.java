@@ -9,6 +9,17 @@ public abstract class absPropriedades implements intMetodos
     protected Double temperatura;
     protected String resposta;
     protected Integer num;
+    protected Double numero1;
+    protected Double numero2;
+    protected String operacao;
+
+    public absPropriedades(Double numero1, Double numero2, String operacao)
+    {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+        this.operacao = operacao;
+        executar();
+    }
 
     public absPropriedades(Integer num)
     {

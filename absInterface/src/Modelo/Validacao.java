@@ -4,6 +4,7 @@ public class Validacao
 {
     private String mensagem;
     protected Double numero;
+    protected Double numero1;
     protected Integer numeroIntPos;
     
     public String validarNumeroInteiroPositivo(String num)
@@ -33,6 +34,14 @@ public class Validacao
         {
             this.mensagem = "Número inválido";
         }
+        return mensagem;
+    }
+    
+    public String validarDoisNumeros(String num1, String num2)
+    {
+        this.mensagem = "";
+        this.mensagem = validarNumero(num1);
+        this.mensagem += validarNumero(num2);
         return mensagem;
     }
 
