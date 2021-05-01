@@ -2,7 +2,8 @@ package Modelo;
 
 public class Primo extends absPropriedades
 {
-
+    private String resposta;
+    
     public Primo(Integer num)
     {
         super(num);
@@ -21,4 +22,12 @@ public class Primo extends absPropriedades
             }
         }
     }
+
+    @Override
+    public String toString()
+    {
+        return resposta;
+    }
+    
+    
 }

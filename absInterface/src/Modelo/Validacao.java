@@ -40,9 +40,24 @@ public class Validacao
     public String validarDoisNumeros(String num1, String num2)
     {
         this.mensagem = "";
-        this.mensagem = validarNumero(num1);
-        this.mensagem += validarNumero(num2);
+        try
+        {
+            this.numero = Double.parseDouble(num1);
+            this.numero1 = Double.parseDouble(num2);
+        }
+        catch (Exception e)
+        {
+            this.mensagem = "Número inválido";
+        }
         return mensagem;
+    }
+    
+    public String validarDivisao(Double numero2, String operacao)
+    {
+        if (numero2.equals(0.0) && operacao.equals("/"))
+            return "Divisão por zero";
+        else
+            return "";
     }
 
 

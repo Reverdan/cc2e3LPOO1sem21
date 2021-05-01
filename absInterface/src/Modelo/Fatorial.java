@@ -2,7 +2,8 @@ package Modelo;
 
 public class Fatorial extends absPropriedades
 {
-
+    private String resposta;
+    
     public Fatorial(Integer num)
     {
         super(num);
@@ -18,5 +19,13 @@ public class Fatorial extends absPropriedades
         }
         this.resposta = num.toString();
     }
+
+    @Override
+    public String toString()
+    {
+        return this.resposta;
+    }
+    
+    
 
 }

@@ -36,6 +36,7 @@ public class frmPrincipal extends javax.swing.JDialog
         mniTemperatura = new javax.swing.JMenuItem();
         mniFatorial = new javax.swing.JMenuItem();
         mniPrimo = new javax.swing.JMenuItem();
+        mniCalculadora = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Exercícios");
@@ -71,6 +72,16 @@ public class frmPrincipal extends javax.swing.JDialog
             }
         });
         mnuExercicios.add(mniPrimo);
+
+        mniCalculadora.setText("Calculadora");
+        mniCalculadora.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                mniCalculadoraActionPerformed(evt);
+            }
+        });
+        mnuExercicios.add(mniCalculadora);
 
         mnbExercicios.add(mnuExercicios);
 
@@ -108,6 +119,12 @@ public class frmPrincipal extends javax.swing.JDialog
         frmPrimo frmP = new frmPrimo(null, true);
         frmP.setVisible(true);
     }//GEN-LAST:event_mniPrimoActionPerformed
+
+    private void mniCalculadoraActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mniCalculadoraActionPerformed
+    {//GEN-HEADEREND:event_mniCalculadoraActionPerformed
+        frmCalculadora frmC = new frmCalculadora(null, true);
+        frmC.setVisible(true);
+    }//GEN-LAST:event_mniCalculadoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -169,6 +186,7 @@ public class frmPrincipal extends javax.swing.JDialog
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar mnbExercicios;
+    private javax.swing.JMenuItem mniCalculadora;
     private javax.swing.JMenuItem mniFatorial;
     private javax.swing.JMenuItem mniPrimo;
     private javax.swing.JMenuItem mniTemperatura;

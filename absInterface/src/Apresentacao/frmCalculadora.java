@@ -6,7 +6,7 @@
 package Apresentacao;
 
 import javax.swing.JOptionPane;
-import modelo.Controle;
+import Modelo.Controle;
 
 
 /**
@@ -144,15 +144,17 @@ public class frmCalculadora extends javax.swing.JDialog
 
     private void enviar(String operacao)
     {
-        Controle controle = new Controle(txfPrimeiroNumero.getText(), 
-            txfSegundoNumero.getText(), operacao);
+        Controle controle = new Controle();
+        controle.calcularCalculadora(txfPrimeiroNumero.getText(), 
+                txfSegundoNumero.getText(), operacao);
         if (controle.getMensagem().equals(""))
         {
-            lblResultado.setText(controle.getResultado());
+            lblResultado.setText(controle.getResposta());
         }
         else
         {
             JOptionPane.showMessageDialog(null, controle.getMensagem());
+            lblResultado.setText("Resposta");
         }
     }
     

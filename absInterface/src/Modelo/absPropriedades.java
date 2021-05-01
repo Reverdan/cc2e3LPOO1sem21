@@ -7,7 +7,6 @@ public abstract class absPropriedades implements intMetodos
     protected String tipo;
     protected String temp;
     protected Double temperatura;
-    protected String resposta;
     protected Integer num;
     protected Double numero1;
     protected Double numero2;
@@ -51,16 +50,4 @@ public abstract class absPropriedades implements intMetodos
     {
         return mensagem;
     }
-
-    public String getResposta()
-    {
-        return resposta;
-    }
-
-    
-    
-    
-    
-    
-
 }

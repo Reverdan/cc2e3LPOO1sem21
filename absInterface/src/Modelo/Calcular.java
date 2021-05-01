@@ -4,7 +4,8 @@ import java.text.DecimalFormat;
 
 public class Calcular extends absPropriedades
 {
-
+    private String resposta;
+    
     public Calcular(Double numero1, Double numero2, String operacao)
     {
         super(numero1, numero2, operacao);
@@ -25,5 +26,13 @@ public class Calcular extends absPropriedades
         if (operacao.equals("/"))
             this.resposta = df.format(numero1 / numero2);
     }
+
+    @Override
+    public String toString()
+    {
+        return resposta;
+    }
+    
+    
     
 }
