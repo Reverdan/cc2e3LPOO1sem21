@@ -5,7 +5,7 @@
  */
 package triangulos;
 
-import Apresentacao.frmPrincipal;
+import Apresentacao.frmTriangulos;
 
 /**
  *
@@ -19,7 +19,7 @@ public class Triangulos
      */
     public static void main(String[] args)
     {
-        frmPrincipal frmP = new frmPrincipal(null, true);
+        frmTriangulos frmP = new frmTriangulos(null, true);
         frmP.setVisible(true);
     }
     
